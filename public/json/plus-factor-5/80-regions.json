@@ -1,0 +1,20 @@
+[
+    {
+        "x":50,
+        "y":140,
+        "width":25,
+        "height":25,
+        "class":"btn",
+        "data" : 
+            { "url": "https://drive.google.com/uc?id=1pzZpHkLtDnXvS2Ls6WimwHrcjXWC55z5" }
+    },
+    {
+        "x":50,
+        "y":190,
+        "width":25,
+        "height":25,
+        "class":"btn",
+        "data" : 
+            { "url": "https://drive.google.com/uc?id=1oWbebEX9MAC1lIWchbTxZE_g8-i6xAGI" }
+    }
+]

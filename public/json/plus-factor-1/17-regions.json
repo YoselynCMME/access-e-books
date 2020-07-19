@@ -1,0 +1,30 @@
+[
+    {
+        "x":40,
+        "y":60,
+        "width":25,
+        "height":25,
+        "class":"btn",
+        "data" : 
+            { "url": "https://drive.google.com/uc?id=1378ZLHHUws-r2OXUR5vpfPRcbEGxaNbG" }
+    },
+    {
+        "x":40,
+        "y":200,
+        "width":25,
+        "height":25,
+        "class":"btn",
+        "data" : 
+            { "url": "https://drive.google.com/uc?id=1fRWzKzeYShYRMa5uqZvgvutorpjUmxe2" }
+    }
+    ,
+    {
+        "x":425,
+        "y":345,
+        "width":25,
+        "height":25,
+        "class":"btn",
+        "data" : 
+            { "url": "https://drive.google.com/uc?id=1EsBkqYWHIFiqikOLIjP4W3OhYZwl4UGt" }
+    }
+]

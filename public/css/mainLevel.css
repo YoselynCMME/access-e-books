@@ -1,0 +1,33 @@
+:root{
+    --blanco:#FFFFFF;
+    --rojo:#D01D36;
+    --transparente: transparent;
+}
+.container{
+    margin-top: 8%;
+    text-align: center;
+}
+
+#btnBook{
+    background-color: var(--transparente);
+    border-color: var(--rojo);
+    border-style: solid;
+    border-width: 3px;
+    border-radius:15px;
+    color:var(--rojo);
+    margin-top:2rem;
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+#btnBook:hover{
+    background-color: var(--rojo);
+    color:var(--blanco);
+}
+
+.fa {
+    font-size: 3.5rem;
+}
