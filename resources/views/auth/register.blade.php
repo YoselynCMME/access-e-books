@@ -14,6 +14,16 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group row">
+                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Soy') }}</label>
+                            <div class="col-md-6">
+                                <select class="form-control" name="role_id" value="{{ old('role_id') }}" required autofocus>
+                                    <option selected disabled>Selecciona una opción</option>
+                                    <option value="2">Alumno</option>
+                                    <option value="3">Profesor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>

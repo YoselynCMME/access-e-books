@@ -31,13 +31,14 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <a id="btnMaterial" class="btn" href="{{ route('materials.extra', [$book->id]) }}">
+                                                    <!-- {{ route('materials.extra', [$book->id]) }} -->
+                                                        <a id="btnMaterial" class="btn" target="_blank" href="{{ $book->link_lessons }}">
                                                             <i class="fa fa-cubes"></i><br>
                                                             Lessons
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <a id="btnMaterial" class="btn" href="{{ $book->link_games }}">
+                                                        <a id="btnMaterial" class="btn" target="_blank" href="{{ $book->link_games }}">
                                                             <i class="fa fa-gamepad"></i><br>
                                                             Games
                                                         </a>

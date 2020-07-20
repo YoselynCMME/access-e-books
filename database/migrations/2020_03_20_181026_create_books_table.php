@@ -15,10 +15,12 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('role_id');
             $table->string('level');
             $table->string('code')->unique();
             $table->string('book');
             $table->string('slug')->unique();
+            $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();
         });
 
