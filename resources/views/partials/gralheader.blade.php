@@ -5,7 +5,7 @@
             <label>MED Majestic Education Digital</label>
         </a>
     @else
-        <a class="navbar-brand" href="{{ route('home') }}">
+        <a class="navbar-brand" href="{{ route('materials.home') }}">
             <img src="{{ asset('images/logoMajestic.svg') }}" class="logo" alt="Majestic Education"/>
             <label>MED Majestic Education Digital</label>
         </a>
