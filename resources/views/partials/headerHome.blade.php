@@ -8,13 +8,19 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+                <a class="nav-link text-white" href="{{ route('login') }}">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ route('register') }}">Registro</a>
+            </li>
+            <!-- <li class="nav-item">
                 <a class="nav-link text-white" href="http://majesticeducationdigital.com/interactive/start/">Start</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="http://majesticeducationdigital.com/interactive/demo/">Menu</a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>
