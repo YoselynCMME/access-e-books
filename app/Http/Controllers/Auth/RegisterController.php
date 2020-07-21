@@ -67,15 +67,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // \DB::connection('db_reagent_extern')->table('users')->insert([
-        //     'role' => 'demo',
-        //     'name' => $data['name'],
-        //     'user_name' => $data['user_name'],
-        //     'email' => $data['email'],
-        //     'password' => Hash::make($data['password']),
-        //     'created_at' => Carbon::now(),
-        //     'updated_at' => Carbon::now()
-        // ]);
+        if($data['role_id'] === '3'){
+            \DB::connection('db_reagent_extern')->table('users')->insert([
+                'role' => 'profesor',
+                'name' => $data['name'],
+                'user_name' => $data['user_name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ]);
+        }
 
         return User::create([
             'role_id' => $data['role_id'],

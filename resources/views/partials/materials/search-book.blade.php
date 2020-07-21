@@ -13,6 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <input type="hidden" name="user_name" value="{{ auth()->user()->user_name }}">
                     <div class="text-center py-2">
                         <button type="submit" class="btn btnRegister btn-sm">
                             {{ __('Guardar') }}

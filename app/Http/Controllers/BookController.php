@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Spatie\Dropbox\Client;
+use Carbon\Carbon;
 use App\Book;
 
 class BookController extends Controller
@@ -33,6 +34,18 @@ class BookController extends Controller
             $search = \DB::table('book_user')->where(['book_id' => $book->id, 'user_id' => auth()->user()->id])->first();
             if( $search == null){
                 auth()->user()->books()->attach($book->id);
+
+                $reagent_book = \DB::connection('db_reagent_extern')->table('books')
+                    ->where('name', 'like','%'.$book->level.'%')->first();
+                $reagent_user = \DB::connection('db_reagent_extern')->table('users')
+                    ->where('user_name', auth()->user()->user_name)->first();
+                
+                \DB::connection('db_reagent_extern')->table('accesos')->insert([
+                    'user_id' => $reagent_user->id,
+                    'book_id' => $reagent_book->id,
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now()
+                ]);
                 return redirect('materials/home');
             } else {
                 return redirect('materials/home')->with('status', "El código de libro ya se encuentra registrado");
