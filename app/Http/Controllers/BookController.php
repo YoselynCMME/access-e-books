@@ -28,7 +28,7 @@ class BookController extends Controller
         $book = Book::whereCode($request->code)->first();
 
         if($book == null)
-            return redirect('materials/home')->with('status', "El código no existe");
+            return redirect('materials/home')->with('status', "El código es incorrecto");
         else {
             $search = \DB::table('book_user')->where(['book_id' => $book->id, 'user_id' => auth()->user()->id])->first();
             if( $search == null){

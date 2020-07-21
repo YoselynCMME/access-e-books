@@ -46,13 +46,13 @@
                                                 </div>
                                                 <div class="row mt-2">
                                                     <div class="col-md-6">
-                                                        <a id="btnMaterial" class="btn" href="#">
+                                                        <a id="btnMaterial" class="btn" target="_blank" href="https://majesticeducationdigital.com/moodle/login/index.php">
                                                             <i class="fa fa-download"></i><br>
                                                             Downloadable material
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <a id="btnMaterial" class="btn" href="#">
+                                                        <a id="btnMaterial" class="btn" target="_blank" href="http://generate-exam-demo.herokuapp.com/login">
                                                             <i class="fa fa-bank"></i><br>
                                                             Reagent Bank
                                                         </a>
