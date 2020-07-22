@@ -15,13 +15,7 @@
             Digital Learning
         </a>
     </div>
-
-    @if(auth()->user()->role_id === 3)
-        @include('partials.materials.books-teacher', ['book' => $book])
-    @endif
-    @if(auth()->user()->role_id === 2)
-        @include('partials.materials.books-student', ['book' => $book])
-    @endif
+    @include('partials.materials.books-teacher', ['book' => $book])
     <div id="book">
         <div id="canvas">
             <div class="zoom-icon zoom-icon-in"></div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
 
 class HomeController extends Controller
 {
@@ -28,12 +29,29 @@ class HomeController extends Controller
     }
 
     public function home_materials(){
-        $books = auth()->user()->books;
-        return view('materials.home', compact('books'));
-    }
+        if(auth()->user()->role_id === 2){
+            $books = auth()->user()->books;
+        }
+        if(auth()->user()->role_id === 3){
+            $accesos = auth()->user()->books;
 
-    public function get_reagent(){
-        $url = 'http://127.0.0.1:8080/login';
-        return redirect()->away($url);
+            $data = array();
+            foreach ($accesos as $acceso) {
+                $b = Book::where('book', 'like','%'.$acceso->book.'%')
+                    ->where('book', '!=', $acceso->book)->first();
+                $package = [
+                    'student' => $acceso,
+                    'teacher' => $b
+                ];
+                array_push($data, $package);
+            }
+
+            $collection = collect($data)->map(function ($name) {
+                return collect($name);
+            });
+            $books = $collection->sortBy('student');
+            $books->values()->all();
+        }
+        return view('materials.home', compact('books'));
     }
 }
