@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="text-center">
-        <h1>e-book</h1>
+        <h2>MAJESTIC EDUCATION DIGITAL</h2>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
