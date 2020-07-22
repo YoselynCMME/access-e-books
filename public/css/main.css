@@ -57,12 +57,12 @@
     height: 100px;
 }
 
-.card-header, .btnRegister, #btnBook, #btnMBook, #btnAction:hover, #btnMaterial:hover {
+.card-header, .btnRegister, #btnBook, #btnMBook, #btnAction:hover, #btnMaterial:hover, #btnMBook1 {
     background-color: var(--rojo);
     color:var(--blanco);
 }
 
-.btnRegister:hover, #btnBook:hover, #btnMBook:hover {
+.btnRegister:hover, #btnBook:hover, #btnMBook:hover, #btnMBook1 {
     background-color: var(--blanco);
     color:var(--rojo);
     border-color: var(--rojo);

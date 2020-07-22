@@ -9,6 +9,19 @@
 @endsection
 
 @section('book')
+    <div class="container text-right">
+        <a class="btn" id="btnMBook1"  data-toggle="modal" data-target="#modal-materials">
+            <i class="fa fa-star"></i>
+            Digital Learning
+        </a>
+    </div>
+
+    @if(auth()->user()->role_id === 3)
+        @include('partials.materials.books-teacher', ['book' => $book])
+    @endif
+    @if(auth()->user()->role_id === 2)
+        @include('partials.materials.books-student', ['book' => $book])
+    @endif
     <div id="book">
         <div id="canvas">
             <div class="zoom-icon zoom-icon-in"></div>

@@ -9,12 +9,7 @@
         <m-alert-component :user="{{ auth()->user() }}"></m-alert-component>
     @endif
     <div class="row">
-        @if(auth()->user()->role_id === 3)
-            @include('partials.materials.books-teacher', ['books' => $books])
-        @endif
-        @if(auth()->user()->role_id === 2)
-            @include('partials.materials.books-student', ['books' => $books])
-        @endif
+        @include('partials.materials.books-with', ['books' => $books])
         @include('partials.materials.search-book')
     </div><br><br>
     @include('partials.materials.indications')
