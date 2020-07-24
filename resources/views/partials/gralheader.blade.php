@@ -15,28 +15,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            @guest
-                @if($type === 'english')
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="http://majesticeducationdigital.com/interactive/start/">Start</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="http://majesticeducationdigital.com/interactive/demo/">Menu</a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="http://majesticeducationdigital.com/interactive/start/">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="http://majesticeducationdigital.com/interactivos/demo/juegos/">Menu</a>
-                    </li>
-                @endif
-            @endguest
-        </ul>
+        <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav ml-auto">
-            @guest
-            @else
+            @auth
                 <li class="nav-item">
                     <a id="liTitle" class="nav-link" href="{{ route('materials.home') }}">{{ __('Mis libros') }}</a>
                 </li>
@@ -50,7 +31,7 @@
                         @csrf
                     </form>
                 </li>
-            @endguest
+            @endauth
         </ul>
     </div>
 </nav>

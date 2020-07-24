@@ -11,12 +11,12 @@
 |
 */
 
-Route::name('books.')->prefix('books')->middleware(['auth'])->group(function () {
+Route::name('books.')->prefix('books')->middleware('auth')->group(function () {
     Route::post('save_book', 'BookController@save_book')->name('save_book');
     Route::get('get_book/{slug}', 'BookController@show')->name('get_book');
 });
 
-Route::name('materials.')->prefix('materials')->middleware(['auth'])->group(function () {
+Route::name('materials.')->prefix('materials')->middleware('auth')->group(function () {
     Route::get('home', 'HomeController@home_materials')->name('home');
     Route::get('extra/{id}', 'BookController@get_extra')->name('extra');
 });

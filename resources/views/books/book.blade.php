@@ -1,21 +1,19 @@
 @extends('layouts.appbook')
 
 @section('navigate')
-    @if($book->slug === 'demo-leo-y-e-1')
-        @include('partials.gralheader', ['type' => 'español'])
-    @else
-        @include('partials.gralheader', ['type' => 'english'])
-    @endif
+    @include('partials.gralheader')
 @endsection
 
 @section('book')
-    <div class="container text-right">
-        <a class="btn" id="btnMBook1"  data-toggle="modal" data-target="#modal-materials">
-            <i class="fa fa-star"></i>
-            Digital Learning
-        </a>
-    </div>
-    @include('partials.materials.books-teacher', ['book' => $book])
+    @if($book->role_id === 2)
+        <div class="container text-right">
+            <a class="btn" id="btnMBook1"  data-toggle="modal" data-target="#modal-materials">
+                <i class="fa fa-star"></i>
+                {{ $book->category === 'comun' ? 'Aprendizaje Digital':'Digital Learning' }}
+            </a>
+        </div>
+        @include('partials.materials.books-teacher', ['book' => $book])
+    @endif
     <div id="book">
         <div id="canvas">
             <div class="zoom-icon zoom-icon-in"></div>

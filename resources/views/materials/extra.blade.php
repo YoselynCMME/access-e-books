@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('menu')
-    @include('partials.gralheader', ['type' => 'english'])
+    @include('partials.gralheader')
 @endsection
 
 @section('content')

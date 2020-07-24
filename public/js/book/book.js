@@ -76,12 +76,6 @@ function zoomTo(event) {
 
 function loadRegions(level_book, page, element) {
 	let lb = level_book;
-	if(level_book === 'plus-factor-1-pro-20-7') lb = 'plus-factor-1';
-	if(level_book === 'plus-factor-2-pro-20-8') lb = 'plus-factor-2';
-	if(level_book === 'plus-factor-4-pro-20-10') lb = 'plus-factor-4';
-	if(level_book === 'plus-factor-5-pro-20-11') lb = 'plus-factor-5';
-	if(level_book === 'english-aware-2-pro-20-12') lb = 'english-aware-2';
-	if(level_book === 'english-aware-4-pro-20-13') lb = 'english-aware-4';
 	
 	$.getJSON(`../../../json/${lb}/${page}-regions.json`).
 		done(function(data) {
