@@ -6,7 +6,7 @@
         "height":40,
         "class":"btn",
         "data" : 
-            { "url": "https://drive.google.com/uc?id=1nWA_qZZpwS88uU-49M2OY1klYVRN2EGQ" }
+            { "url": "https://dl.dropbox.com/s/xbnv4kv4e0pfzph/E.%20A%202%20TRACK%206.mp3" }
     },
     {
         "x":205,
@@ -15,15 +15,6 @@
         "height":40,
         "class":"btn",
         "data" : 
-            { "url": "https://drive.google.com/uc?id=1nWA_qZZpwS88uU-49M2OY1klYVRN2EGQ" }
-    },
-    {
-        "x":200,
-        "y":540,
-        "width":40,
-        "height":40,
-        "class":"btn",
-        "data" : 
-            { "url": "https://drive.google.com/uc?id=1nWA_qZZpwS88uU-49M2OY1klYVRN2EGQ" }
+            { "url": "https://dl.dropbox.com/s/xbnv4kv4e0pfzph/E.%20A%202%20TRACK%206.mp3" }
     }
 ]
