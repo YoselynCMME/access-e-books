@@ -7,5 +7,7 @@
 @section('content')
     @include('partials.materials.books-with', ['books' => $books])
     <br><br>
-    @include('partials.materials.indications')
+    @if(auth()->user()->role_id === 3)
+        @include('partials.materials.indications')
+    @endif
 @endsection

@@ -31,12 +31,17 @@ class HomeController extends Controller
     public function home_materials(){
         if(auth()->user()->role_id === 2){
             $accesos = auth()->user()->books;
-            $books = array();
+            $bs = array();
             foreach($accesos as $acceso){
                 $b = $acceso;
                 $b->link_games = str_replace('teacher', 'student', $b->link_games);
-                array_push($books, $acceso);
+                array_push($bs, $b);
             }
+            $collection = collect($bs)->map(function ($name) {
+                return collect($name);
+            });
+            $books = $collection->sortBy('book');
+            $books->values()->all();
         }
         if(auth()->user()->role_id === 3){
             $accesos = auth()->user()->books;

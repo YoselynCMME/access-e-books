@@ -11,22 +11,25 @@
                             @if(auth()->user()->role_id === 3)
                                 <h4>{{ $book['student']['book'] }}</h4>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <a class="btn" id="btnMBook" href="{{ route('books.get_book', [$book['student']['slug']]) }}">
                                             <i style="font-size:30px;" class="fa fa-book"></i><br>
                                             {{ $book['student']['category'] === 'comun' ? 'Vista del docente':'Teacher view' }} 
                                         </a>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <a class="btn" id="btnMBook" href="{{ $book['teacher'] !== null ? route('books.get_book', [$book['teacher']['slug']]):'#' }}">
+                                        <a class="btn mt-2" id="btnMBook" href="{{ $book['teacher'] !== null ? route('books.get_book', [$book['teacher']['slug']]):'#' }}">
                                             <i style="font-size:30px;" class="fa fa-book"></i><br>
-                                            {{ $book['student']['category'] === 'comun' ? 'Recursos para docentes':'Teacher resources' }} 
+                                            {{ $book['student']['category'] === 'comun' ? 'Guía del maestro':'Teacher Guide' }} 
                                         </a>
+                                    </div>
+                                    <div class="col-md-7">
+                                        @include('partials.materials.digital-learning', ['book' => $book['student']])
                                     </div>
                                 </div>
                             @else
-                                <h4><b>{{ $book->book }}</b></h4>
-                                <h5>Digital Learning</h5>
+                                <h4><b>{{ $book['book'] }}</b></h4>
+                                <h5>
+                                    {{ $book['category'] === 'comun' ? 'Aprendizaje Digital':'Digital Learning' }}
+                                </h5>
                                 @include('partials.materials.books-student', ['book' => $book])
                             @endif
                         </div>

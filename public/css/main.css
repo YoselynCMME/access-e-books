@@ -57,6 +57,10 @@
     height: 100px;
 }
 
+#btnSimple {
+    width: 100%;
+}
+
 .card-header, .btnRegister, #btnBook, #btnMBook, #btnAction:hover, #btnMaterial:hover, 
 #btnMaterialSt:hover, #btnMBook1 {
     background-color: var(--rojo);
@@ -80,7 +84,7 @@
     padding: 1rem;
 }
 
-#btnSubject{
+#btnSubject, #btnSimple{
     background-color: var(--amarillo);
     color:var(--blanco);
 }

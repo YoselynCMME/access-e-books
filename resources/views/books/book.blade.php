@@ -5,15 +5,6 @@
 @endsection
 
 @section('book')
-    @if($book->role_id === 2)
-        <div class="container text-right">
-            <a class="btn" id="btnMBook1"  data-toggle="modal" data-target="#modal-materials">
-                <i class="fa fa-star"></i>
-                {{ $book->category === 'comun' ? 'Aprendizaje Digital':'Digital Learning' }}
-            </a>
-        </div>
-        @include('partials.materials.books-teacher', ['book' => $book])
-    @endif
     <div id="book">
         <div id="canvas">
             <div class="zoom-icon zoom-icon-in"></div>
