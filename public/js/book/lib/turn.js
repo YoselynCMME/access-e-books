@@ -548,7 +548,7 @@ turnMethods = {
         css(turnMethods._pageSize.call(this, page)).
         flip({
           page: page,
-          next: (odd || single) ? page+1 : page-1,
+          // next: (odd || single) ? page+1 : page-1,
           turn: this
         }).
         flip('disable', data.disabled);
