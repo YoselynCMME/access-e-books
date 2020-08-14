@@ -11,17 +11,17 @@
                             @if(auth()->user()->role_id === 3)
                                 <h4>{{ $book['student']['book'] }}</h4>
                                 <div class="row">
-                                    <div class="col-md-5">
+                                    <div class="col-md-6">
                                         <a class="btn" id="btnMBook" href="{{ route('books.get_book', [$book['student']['slug']]) }}">
                                             <i style="font-size:30px;" class="fa fa-book"></i><br>
-                                            {{ $book['student']['category'] === 'comun' ? 'Vista del docente':'Teacher view' }} 
+                                            {{ $book['student']['category'] === 'comun' ? 'Libro proyectable':'Projectable book' }} 
                                         </a>
                                         <a class="btn mt-2" id="btnMBook" href="{{ $book['teacher'] !== null ? route('books.get_book', [$book['teacher']['slug']]):'#' }}">
                                             <i style="font-size:30px;" class="fa fa-book"></i><br>
-                                            {{ $book['student']['category'] === 'comun' ? 'Guía del maestro':'Teacher Guide' }} 
+                                            {{ $book['student']['category'] === 'comun' ? 'Guía del maestro':"Teacher's Guide" }} 
                                         </a>
                                     </div>
-                                    <div class="col-md-7">
+                                    <div class="col-md-6">
                                         @include('partials.materials.digital-learning', ['book' => $book['student']])
                                     </div>
                                 </div>
