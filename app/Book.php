@@ -8,6 +8,10 @@ use App\Page;
 
 class Book extends Model
 {
+    protected $fillable = [
+        'category', 'level', 'code', 'book', 'role_id', 'slug', 'link_lessons', 'link_games'
+    ];
+
     public function users(){
         return $this->belongsToMany(User::class);
     }

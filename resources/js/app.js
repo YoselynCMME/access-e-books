@@ -33,6 +33,11 @@ Vue.component('menu-component', require('./components/MenuComponent.vue').defaul
 
 Vue.component('m-alert-component', require('./components/AlertComponent.vue').default);
 
+// BOOKS
+Vue.component('books-component', require('./components/administrator/BooksComponent.vue').default);
+Vue.component('users-component', require('./components/administrator/UsersComponent.vue').default);
+Vue.component('books-user-component', require('./components/administrator/BooksUserComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

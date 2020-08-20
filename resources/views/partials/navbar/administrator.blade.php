@@ -18,7 +18,10 @@
         <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a id="liTitle" class="nav-link" href="{{ route('materials.home') }}">{{ __('Mis libros') }}</a>
+                <a id="liTitle" class="nav-link" href="{{ route('administrator.home') }}">{{ __('Libros') }}</a>
+            </li>
+            <li class="nav-item">
+                <a id="liTitle" class="nav-link" href="{{ route('administrator.users') }}">{{ __('Usuarios') }}</a>
             </li>
             @include('partials.navbar.logout')
         </ul>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('menu')
-    @include('partials.headerHome')
+    @include('partials.navbar.administrator')
 @endsection
 
 @section('content')
@@ -9,12 +9,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center"><h5>{{ __('Regístrate') }}</h5></div>
+                <div class="card-header text-center"><h5>{{ __('Registrar usuario') }}</h5></div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('administrator.register') }}">
                         @csrf
                         <div class="form-group row">
-                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Soy') }}</label>
+                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Rol') }}</label>
                             <div class="col-md-6">
                                 <select class="form-control" name="role_id" value="{{ old('role_id') }}" required autofocus>
                                     <option selected disabled>Selecciona una opción</option>
@@ -45,25 +45,6 @@
                                 @enderror
                             </div>
                         </div>
-                        <!-- <div class="form-group row">
-                            <label for="level" class="col-md-4 col-form-label text-md-right">{{ __('Nivel') }}</label>
-                            <div class="col-md-6">
-                                <select id="level" class="form-control @error('level') is-invalid @enderror" name="level" value="{{ old('level') }}" required>
-                                    <option selected disabled>Selecciona una opción</option>
-                                    <option value="1">A1</option>
-                                    <option value="2">A1+</option>
-                                    <option value="3">A2</option>
-                                    <option value="4">A2+</option>
-                                    <option value="5">B1</option>
-                                    <option value="6">B1+</option>
-                                </select>
-                                @error('level')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div> -->
                         <div class="form-group row">
                             <label for="school" class="col-md-4 col-form-label text-md-right">{{ __('Escuela') }}</label>
                             <div class="col-md-6">
@@ -106,7 +87,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btnRegister">
-                                    {{ __('Registrar') }}
+                                    {{ __('Guardar') }}
                                 </button>
                             </div>
                         </div>

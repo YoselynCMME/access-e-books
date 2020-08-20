@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use Spatie\Dropbox\Client;
 use Carbon\Carbon;
@@ -543,6 +544,48 @@ class BookController extends Controller
         $book = Book::find($id);
         $link_lessons = $book->link_lessons;
         return view('materials.extra', compact('link_lessons'));
+    }
+
+    public function store(Request $request){
+        $this->validacion($request);
+        $book = Book::create($this->insert_data($request));
+        return response()->json($book);
+    }
+
+    public function update(Request $request){
+        $this->validacion($request);
+        $book = Book::whereId($request->id)->first();
+        $book->update($this->insert_data($request));
+        return response()->json($book);
+    }
+
+    public function delete(){
+        $book_id = Input::get('book_id');
+        Book::whereId($book_id)->delete();
+        return response()->json();
+    }
+
+    public function validacion($request){
+        $this->validate($request, [
+            'code' => 'min:5|max:10|required|string',
+            'book' => 'min:5|required|string',
+            'link_lessons' => 'min:1|required|string',
+            'link_games' => 'min:1|required|string'
+        ]);
+    }
+
+    public function insert_data($request){
+        $slug = str_slug($request->book, '-');
+        return [
+            'category' => $request->category,
+            'level' => $request->level,
+            'code' => $request->code,
+            'book' => $request->book,
+            'role_id' => $request->role_id,
+            'slug' => $slug,
+            'link_lessons' => $request->link_lessons,
+            'link_games' => $request->link_games
+        ];
     }
 
 }
