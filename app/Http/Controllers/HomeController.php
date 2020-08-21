@@ -49,6 +49,7 @@ class HomeController extends Controller
             $data = array();
             foreach ($accesos as $acceso) {
                 $b = Book::where('book', 'like','%'.$acceso->book.'%')
+                    ->where('book', 'like','%TEACHER%')
                     ->where('book', '!=', $acceso->book)->first();
                 $package = [
                     'student' => $acceso,
