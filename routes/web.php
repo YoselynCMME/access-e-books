@@ -17,6 +17,7 @@ Auth::routes(['register' => false]);
 Route::name('books.')->prefix('books')->middleware('auth')->group(function () {
     // Route::post('save_book', 'BookController@save_book')->name('save_book');
     Route::get('get_book/{slug}', 'BookController@show')->name('get_book');
+    Route::get('material/{slug}', 'BookController@material')->name('material');
 
     Route::put('update_book', 'BookController@update')->name('update_book');
     Route::post('save_book', 'BookController@store')->name('save_book');

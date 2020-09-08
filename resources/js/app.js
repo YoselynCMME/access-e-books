@@ -33,6 +33,10 @@ Vue.component('menu-component', require('./components/MenuComponent.vue').defaul
 
 Vue.component('m-alert-component', require('./components/AlertComponent.vue').default);
 
+// MATERIALS
+Vue.component('materials-component', require('./components/materials/MaterialsComponent.vue').default);
+Vue.component('partial-cards', require('./components/materials/partials/PartialCards.vue').default);
+
 // BOOKS
 Vue.component('books-component', require('./components/administrator/BooksComponent.vue').default);
 Vue.component('users-component', require('./components/administrator/UsersComponent.vue').default);

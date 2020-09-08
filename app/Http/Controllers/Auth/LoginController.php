@@ -39,6 +39,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function redirectPath(){
+        if(auth()->user()->role->role == 'profesor')
+            return 'materials/home';
+        if(auth()->user()->role->role == 'administrador')
+            return 'administrator/home';
+    } 
+
     protected function credentials(Request $request) {
         $login = $request->input($this->username());
     

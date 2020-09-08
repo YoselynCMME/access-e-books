@@ -13,28 +13,28 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('role_id');
-            $table->string('code')->unique();
-            $table->string('category');
-            $table->string('level');
-            $table->string('book');
-            $table->string('slug')->unique();
-            $table->text('link_lessons');
-            $table->text('link_games');
-            $table->foreign('role_id')->references('id')->on('roles');
-            $table->timestamps();
-        });
+        // Schema::create('books', function (Blueprint $table) {
+        //     $table->bigIncrements('id');
+        //     $table->unsignedBigInteger('role_id');
+        //     $table->string('code')->unique();
+        //     $table->string('category');
+        //     $table->string('level');
+        //     $table->string('book');
+        //     $table->string('slug')->unique();
+        //     $table->text('link_lessons');
+        //     $table->text('link_games');
+        //     $table->foreign('role_id')->references('id')->on('roles');
+        //     $table->timestamps();
+        // });
 
-        Schema::create('pages', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('book_id');
-            $table->string('clave');
-            $table->string('page');
-            $table->foreign('book_id')->references('id')->on('books');
-            $table->timestamps();
-        });
+        // Schema::create('pages', function (Blueprint $table) {
+        //     $table->bigIncrements('id');
+        //     $table->unsignedBigInteger('book_id');
+        //     $table->string('clave');
+        //     $table->string('page');
+        //     $table->foreign('book_id')->references('id')->on('books');
+        //     $table->timestamps();
+        // });
     }
 
     /**

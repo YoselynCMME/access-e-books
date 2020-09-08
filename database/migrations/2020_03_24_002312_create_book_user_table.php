@@ -13,14 +13,14 @@ class CreateBookUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('book_user', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('book_id');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('book_id')->references('id')->on('books');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
-        });
+        // Schema::create('book_user', function (Blueprint $table) {
+        //     $table->bigIncrements('id');
+        //     $table->unsignedBigInteger('book_id');
+        //     $table->unsignedBigInteger('user_id');
+        //     $table->foreign('book_id')->references('id')->on('books');
+        //     $table->foreign('user_id')->references('id')->on('users');
+        //     $table->timestamps();
+        // });
     }
 
     /**

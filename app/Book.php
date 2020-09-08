@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Page;
+use App\Link;
 
 class Book extends Model
 {
@@ -18,5 +19,9 @@ class Book extends Model
 
     public function pages(){
         return $this->hasMany(Page::class);
+    }
+
+    public function links(){
+        return $this->hasMany(Link::class);
     }
 }

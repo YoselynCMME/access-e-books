@@ -61,6 +61,26 @@ class BookController extends Controller
         return view('books.book', compact('book'));
     }
 
+    public function material($slug){
+        $book = Book::whereSlug($slug)->with('links.categorie')->first();
+        $data = [ 'id_1' => array(), 'id_2' => array(), 'id_3' => array(), 'id_4' => array(), 'id_5' => array(), 'id_6' => array() ];
+        foreach ($book->links as $link) {
+            if($link->categorie_id === 1) array_push($data['id_1'], $link);
+            if($link->categorie_id === 2) array_push($data['id_2'], $link);
+            if($link->categorie_id === 3) array_push($data['id_3'], $link);
+            if($link->categorie_id === 4) array_push($data['id_4'], $link);
+            if($link->categorie_id === 5) array_push($data['id_5'], $link);
+            if($link->categorie_id === 6) array_push($data['id_6'], $link);
+        }
+
+        $collection = collect($data)->map(function ($name) {
+            return collect($name);
+        });
+        $categories = $collection->sortBy('category_id');
+        $categories->values()->all();
+        return view('materials.material', compact('book', 'categories'));
+    }
+
     public function show_category($category){
         $books = Book::where('category', $category)->get();
         return view('promociones.level', compact('books'));

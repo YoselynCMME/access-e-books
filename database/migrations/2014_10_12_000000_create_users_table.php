@@ -13,25 +13,25 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('role');
-            $table->timestamps();
-        });
+        // Schema::create('roles', function (Blueprint $table) {
+        //     $table->bigIncrements('id');
+        //     $table->string('role');
+        //     $table->timestamps();
+        // });
 
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('role_id')->default(2);
-            $table->string('name');
-            $table->string('school');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('user_name')->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->foreign('role_id')->references('id')->on('roles');
-            $table->timestamps();
-        });
+        // Schema::create('users', function (Blueprint $table) {
+        //     $table->bigIncrements('id');
+        //     $table->unsignedBigInteger('role_id')->default(2);
+        //     $table->string('name');
+        //     $table->string('school');
+        //     $table->string('email')->unique();
+        //     $table->timestamp('email_verified_at')->nullable();
+        //     $table->string('user_name')->unique();
+        //     $table->string('password');
+        //     $table->rememberToken();
+        //     $table->foreign('role_id')->references('id')->on('roles');
+        //     $table->timestamps();
+        // });
     }
 
     /**

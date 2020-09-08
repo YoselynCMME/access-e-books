@@ -56,22 +56,45 @@ class UserController extends Controller
                 $user->books()->attach($book->id);
 
                 if($user->role_id === 3){
-                    $reagent_book = \DB::connection('db_reagent_extern')->table('books')
-                        ->where('name', 'like','%'.$book->level.'%')->first();
+                    if($book->category === 'english'){
+                        $reagent_book = $this->queryBook($book->level);
+                    } else {
+                        $b = strpos($book->book, 'BIOLOGIA 1');
+                        $q = strpos($book->book, 'QUIMICA 1');
+                        
+                        if($b === false) $reagent_book = $this->queryBook($book->book);
+                        if($q === false) $reagent_book = $this->queryBook($book->book);
+                        if($b === 9) $reagent_book = $this->queryBook('BIOLOGIA 1');
+                        if($q === 9) $reagent_book = $this->queryBook('QUIMICA 1');
+                    }
+
                     $reagent_user = \DB::connection('db_reagent_extern')->table('users')
                         ->where('user_name', $user->user_name)->first();
                     
-                    \DB::connection('db_reagent_extern')->table('accesos')->insert([
-                        'user_id' => $reagent_user->id,
-                        'book_id' => $reagent_book->id,
-                        'created_at' => Carbon::now(),
-                        'updated_at' => Carbon::now()
-                    ]); 
+                    if($reagent_book !== null){
+                        $buscar = \DB::connection('db_reagent_extern')->table('accesos')
+                            ->where('user_id', $reagent_user->id)
+                            ->where('book_id', $reagent_book->id)->first();
+                        
+                        if($buscar === null){
+                            \DB::connection('db_reagent_extern')->table('accesos')->insert([
+                                'user_id' => $reagent_user->id,
+                                'book_id' => $reagent_book->id,
+                                'created_at' => Carbon::now(),
+                                'updated_at' => Carbon::now()
+                            ]); 
+                        }
+                    }
                 }
                 return response()->json("El libro se guardo");
             } else {
                 return response()->json("El código de libro ya se encuentra registrado");
             }
         }
+    }
+
+    public function queryBook($book){
+        return \DB::connection('db_reagent_extern')->table('books')
+                                ->where('name', 'like','%'.$book.'%')->first();
     }
 }

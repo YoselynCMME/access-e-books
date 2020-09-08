@@ -68,6 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
         if($data['role_id'] === '3'){
             \DB::connection('db_reagent_extern')->table('users')->insert([
                 'role' => 'profesor',
