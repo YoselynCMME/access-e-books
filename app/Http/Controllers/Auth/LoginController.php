@@ -40,7 +40,7 @@ class LoginController extends Controller
     }
 
     public function redirectPath(){
-        if(auth()->user()->role->role == 'profesor')
+        if(auth()->user()->role->role == 'profesor' || auth()->user()->role->role == 'alumno')
             return 'materials/home';
         if(auth()->user()->role->role == 'administrador')
             return 'administrator/home';
