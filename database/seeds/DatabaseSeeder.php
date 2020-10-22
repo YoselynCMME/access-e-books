@@ -11788,42 +11788,43 @@ class DatabaseSeeder extends Seeder
         //     167 => [ 'book_id' => 92, 'clave' => '60s6fydiqst2kil', 'page' => '168' ]            
         // ]);
 
-        \DB::table('categories')->insert([
-            0 => [ 'category' => 'Teacher´s Guide'],
-            1 => [ 'category' => 'Extra Workbook'],
-            2 => [ 'category' => 'Extra evaluation'],
-            3 => [ 'category' => 'Tracks Script'],
-            4 => [ 'category' => 'Tracks'],
-            5 => [ 'category' => 'Videos']
-        ]);
+        // \DB::table('categories')->insert([
+        //     0 => [ 'category' => 'Teacher´s Guide'],
+        //     1 => [ 'category' => 'Extra Workbook'],
+        //     2 => [ 'category' => 'Extra evaluation'],
+        //     3 => [ 'category' => 'Tracks Script'],
+        //     4 => [ 'category' => 'Tracks'],
+        //     5 => [ 'category' => 'Videos']
+        // ]);
 
-        \DB::table('links')->insert([
-            0 => [ 'categorie_id' => 1, 'name' => 'Teacher´s Guide', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'g7ydved3x8lwaik/English%20Aware%201_Teacher%20Guide...pdf'],
-            1 => [ 'categorie_id' => 2, 'name' => 'Workbook with answers', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'rirhuwk427wep0a/Workbook%20A1%20CR.pdf'],
-            2 => [ 'categorie_id' => 2, 'name' => 'Workbook print format', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'exvc6mtpzo3lga9/Workbook%20A1%20SR.pdf'],
-            3 => [ 'categorie_id' => 3, 'name' => 'Extra evaluation with answers', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '3gsg8cjie692mo8/Extra%20Evaluation%20A1%20SR.pdf'],
-            4 => [ 'categorie_id' => 3, 'name' => 'Extra evaluation print format', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '3gsg8cjie692mo8/Extra%20Evaluation%20A1%20SR.pdf'],
-            5 => [ 'categorie_id' => 4, 'name' => 'Tracks Script', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '8x2oeexmb2z88x3/Tracks%20Script%20ENGLISH%20AWARE%201.pdf'],
-            6 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 01', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'x7d80wibwl6ea7e/EA1%20%281%29.mp3'],
-            7 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 02', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'f688o909anz5t1o/EA1%20%282%29.mp3'],
-            8 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 03', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'gd8k2qd3r09dzqh/EA1%20%283%29.mp3'],
-            9 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 04', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'o8agguy3hr2e1kp/EA1%20%284%29.mp3'],
-            10 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 05', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'cn9kyfxz0efqf9z/EA1%20%285%29.mp3'],
-            11 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 06', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '2emeyvcewtwvfdc/EA1%20%286%29.mp3'],
-            12 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 07', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'yszjxa90ouu92sh/EA1%20%287%29.mp3'],
-            13 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 08', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'd58i2wifwi32br9/EA1%20%288%29.mp3'],
-            14 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 09', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'jrptbujr7k18pqv/EA1%20%289%29.mp3'],
-            15 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 10', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'hrk517kpy2fyem8/EA1%20%2810%29.mp3'],
-            16 => [ 'categorie_id' => 6, 'name' => 'Greetings', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/m-a4mAeUAcg'],
-            17 => [ 'categorie_id' => 6, 'name' => 'Countries and nationalities', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/NJVV1LDt2hE'],
-            18 => [ 'categorie_id' => 6, 'name' => 'Greetings and introductions', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/sp3xU5WvRjA'],
-            19 => [ 'categorie_id' => 6, 'name' => 'Question words', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/YYZ40fy0au8'],
-            20 => [ 'categorie_id' => 6, 'name' => 'Possessive case', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/E9A1Y0piP44'],
-            21 => [ 'categorie_id' => 6, 'name' => 'Countables and incountables', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/WcXgZvTUQ9M'],
-            22 => [ 'categorie_id' => 6, 'name' => 'Adverbs of frecuency', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/I5zgedh9L6I'],
-            23 => [ 'categorie_id' => 6, 'name' => 'Comparatives and superlatives4', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/9KIiaLupHuA'],
-            24 => [ 'categorie_id' => 6, 'name' => 'As - as', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/KNJ5Lovejw0'],
-            25 => [ 'categorie_id' => 6, 'name' => 'Irregular verbs', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/egNPTRgURuo']            
-        ]);
+        // \DB::table('links')->insert([
+        //     0 => [ 'categorie_id' => 1, 'name' => 'Teacher´s Guide', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'g7ydved3x8lwaik/English%20Aware%201_Teacher%20Guide...pdf'],
+        //     1 => [ 'categorie_id' => 2, 'name' => 'Workbook with answers', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'rirhuwk427wep0a/Workbook%20A1%20CR.pdf'],
+        //     2 => [ 'categorie_id' => 2, 'name' => 'Workbook print format', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'exvc6mtpzo3lga9/Workbook%20A1%20SR.pdf'],
+        //     3 => [ 'categorie_id' => 3, 'name' => 'Extra evaluation with answers', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '3gsg8cjie692mo8/Extra%20Evaluation%20A1%20SR.pdf'],
+        //     4 => [ 'categorie_id' => 3, 'name' => 'Extra evaluation print format', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '3gsg8cjie692mo8/Extra%20Evaluation%20A1%20SR.pdf'],
+        //     5 => [ 'categorie_id' => 4, 'name' => 'Tracks Script', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '8x2oeexmb2z88x3/Tracks%20Script%20ENGLISH%20AWARE%201.pdf'],
+        //     6 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 01', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'x7d80wibwl6ea7e/EA1%20%281%29.mp3'],
+        //     7 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 02', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'f688o909anz5t1o/EA1%20%282%29.mp3'],
+        //     8 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 03', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'gd8k2qd3r09dzqh/EA1%20%283%29.mp3'],
+        //     9 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 04', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'o8agguy3hr2e1kp/EA1%20%284%29.mp3'],
+        //     10 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 05', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'cn9kyfxz0efqf9z/EA1%20%285%29.mp3'],
+        //     11 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 06', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => '2emeyvcewtwvfdc/EA1%20%286%29.mp3'],
+        //     12 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 07', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'yszjxa90ouu92sh/EA1%20%287%29.mp3'],
+        //     13 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 08', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'd58i2wifwi32br9/EA1%20%288%29.mp3'],
+        //     14 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 09', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'jrptbujr7k18pqv/EA1%20%289%29.mp3'],
+        //     15 => [ 'categorie_id' => 5, 'name' => 'E. A. 1 Track 10', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'hrk517kpy2fyem8/EA1%20%2810%29.mp3'],
+        //     16 => [ 'categorie_id' => 6, 'name' => 'Greetings', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/m-a4mAeUAcg'],
+        //     17 => [ 'categorie_id' => 6, 'name' => 'Countries and nationalities', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/NJVV1LDt2hE'],
+        //     18 => [ 'categorie_id' => 6, 'name' => 'Greetings and introductions', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/sp3xU5WvRjA'],
+        //     19 => [ 'categorie_id' => 6, 'name' => 'Question words', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/YYZ40fy0au8'],
+        //     20 => [ 'categorie_id' => 6, 'name' => 'Possessive case', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/E9A1Y0piP44'],
+        //     21 => [ 'categorie_id' => 6, 'name' => 'Countables and incountables', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/WcXgZvTUQ9M'],
+        //     22 => [ 'categorie_id' => 6, 'name' => 'Adverbs of frecuency', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/I5zgedh9L6I'],
+        //     23 => [ 'categorie_id' => 6, 'name' => 'Comparatives and superlatives4', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/9KIiaLupHuA'],
+        //     24 => [ 'categorie_id' => 6, 'name' => 'As - as', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/KNJ5Lovejw0'],
+        //     25 => [ 'categorie_id' => 6, 'name' => 'Irregular verbs', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/egNPTRgURuo']            
+        // ]);
     }
+
 }
