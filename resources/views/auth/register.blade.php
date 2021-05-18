@@ -20,6 +20,7 @@
                                     <option selected disabled>Selecciona una opción</option>
                                     <option value="2">Alumno</option>
                                     <option value="3">Profesor</option>
+                                    <option value="4">Guía</option>
                                 </select>
                             </div>
                         </div>

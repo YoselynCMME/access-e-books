@@ -64,6 +64,12 @@ class HomeController extends Controller
             $books = $collection->sortBy('student');
             $books->values()->all();
         }
+        if(auth()->user()->role_id === 4){
+            $accesos = auth()->user()->books;
+            $collection = collect($accesos);
+            $books = $collection->sortBy('book');
+            $books->values()->all();
+        }
         return view('materials.home', compact('books'));
     }
 }

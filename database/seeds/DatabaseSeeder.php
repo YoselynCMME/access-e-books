@@ -11825,6 +11825,34 @@ class DatabaseSeeder extends Seeder
         //     24 => [ 'categorie_id' => 6, 'name' => 'As - as', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/KNJ5Lovejw0'],
         //     25 => [ 'categorie_id' => 6, 'name' => 'Irregular verbs', 'book_id' => 3,'image' => 'https://placekitten.com/300/300', 'link' => 'https://www.youtube.com/embed/egNPTRgURuo']            
         // ]);
+
+        // \DB::table('users')->insert([
+        //     0 => [ 'role_id' => 2, 'name' => 'Xali Alexa  Álvarez  Sanchez ', 'school' => 'MED', 'email' => 'xalialexaa4@gmail.com', 'user_name' => 'xali24', 'password' => bcrypt('xali24') ],
+        //     1 => [ 'role_id' => 2, 'name' => 'Ariel Natalia Ballesteros  Méndez', 'school' => 'MED', 'email' => 'nataliaballesteros717@gmail.com', 'user_name' => 'ariel23', 'password' => bcrypt('ariel23') ],
+        //     2 => [ 'role_id' => 2, 'name' => 'Osvaldo Becerra Alcantar', 'school' => 'MED', 'email' => 'juankrat2075@gmail.com', 'user_name' => 'osvaldo49', 'password' => bcrypt('osvaldo49') ],
+        //     3 => [ 'role_id' => 2, 'name' => 'José Ángel Cedillo Soto', 'school' => 'MED', 'email' => 'lolpro1910@gmail.com', 'user_name' => 'josé22', 'password' => bcrypt('josé22') ],
+        //     4 => [ 'role_id' => 2, 'name' => 'Paulina Domínguez  Chávez', 'school' => 'MED', 'email' => 'pau.dom.cha21@gmail.com', 'user_name' => 'paulina79', 'password' => bcrypt('paulina79') ],
+        //     5 => [ 'role_id' => 2, 'name' => 'Alan De Jesús  Duran  Martinez ', 'school' => 'MED', 'email' => 'alandejesus222007@gmail.com', 'user_name' => 'alan47', 'password' => bcrypt('alan47') ],
+        //     6 => [ 'role_id' => 2, 'name' => 'Estefany Valeria garcia romero', 'school' => 'MED', 'email' => 'estefanyvaleriagarciaromero@gmail.com', 'user_name' => 'estefany56', 'password' => bcrypt('estefany56') ],
+        //     7 => [ 'role_id' => 2, 'name' => 'Ana Camila García Ríos', 'school' => 'MED', 'email' => 'camigrios114@gmail.com', 'user_name' => 'ana76', 'password' => bcrypt('ana76') ],
+        //     8 => [ 'role_id' => 2, 'name' => 'María Fernanda Gil Castillo', 'school' => 'MED', 'email' => 'mafegil204@gmail.com', 'user_name' => 'maría70', 'password' => bcrypt('maría70') ],
+        //     9 => [ 'role_id' => 2, 'name' => 'Valentina  Gómez  García ', 'school' => 'MED', 'email' => 'valegomezg13@gmail.com', 'user_name' => 'valentina35', 'password' => bcrypt('valentina35') ],
+        //     10 => [ 'role_id' => 2, 'name' => 'valeria  guerrero  ruiz ', 'school' => 'MED', 'email' => 'guerrero.valeria2806@gmail.com', 'user_name' => 'valeria15', 'password' => bcrypt('valeria15') ],
+        //     11 => [ 'role_id' => 2, 'name' => 'roderik daniel llanos magana', 'school' => 'MED', 'email' => 'rllanosmagana@gmail.com', 'user_name' => 'roderik75', 'password' => bcrypt('roderik75') ],
+        //     12 => [ 'role_id' => 2, 'name' => 'Valentina Mejia Tello', 'school' => 'MED', 'email' => 'valentinamejiatello2404@gmail.com', 'user_name' => 'valentina10', 'password' => bcrypt('valentina10') ],
+        //     13 => [ 'role_id' => 2, 'name' => 'Constanza Monroy Mendez', 'school' => 'MED', 'email' => 'constanzamonroymendezdosecu@gmail.com', 'user_name' => 'constanza87', 'password' => bcrypt('constanza87') ],
+        //     14 => [ 'role_id' => 2, 'name' => 'Edgar Ontiveros Salinas', 'school' => 'MED', 'email' => 'salinasesgar636@gmail.com', 'user_name' => 'edgar76', 'password' => bcrypt('edgar76') ],
+        //     15 => [ 'role_id' => 2, 'name' => 'Joel Piña Quintanar', 'school' => 'MED', 'email' => 'joelpqaz012@gmail.com', 'user_name' => 'joel75', 'password' => bcrypt('joel75') ],
+        //     16 => [ 'role_id' => 2, 'name' => 'sebastian ruiz soto', 'school' => 'MED', 'email' => 'sebastianruizsoto0805@gmail.com', 'user_name' => 'sebastian98', 'password' => bcrypt('sebastian98') ],
+        //     17 => [ 'role_id' => 2, 'name' => 'Natalia Alejandra Salas Dominguez', 'school' => 'MED', 'email' => 'nataliasalasd091007@gmail.com', 'user_name' => 'natalia95', 'password' => bcrypt('natalia95') ],
+        //     18 => [ 'role_id' => 2, 'name' => 'Daniel alexander Tovar Garduño', 'school' => 'MED', 'email' => 'danielgarduno407@gmail.com', 'user_name' => 'daniel42', 'password' => bcrypt('daniel42') ],
+        //     19 => [ 'role_id' => 2, 'name' => 'Frida Sofía Vargas Falcón', 'school' => 'MED', 'email' => 'fridvarg@gmail.com', 'user_name' => 'frida53', 'password' => bcrypt('frida53') ],
+        //     20 => [ 'role_id' => 2, 'name' => 'Karol Fernanda  Vilchis Sánchez', 'school' => 'MED', 'email' => 'fernandavilchissanchez@gmail.com', 'user_name' => 'karol85', 'password' => bcrypt('karol85') ]            
+        // ]);
+
+        \DB::table('roles')->insert([
+            0 => ['role' => 'guides'],
+        ]); 
     }
 
 }
